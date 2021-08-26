@@ -1,7 +1,11 @@
-* {
-    margin: 10px;
-    padding: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
