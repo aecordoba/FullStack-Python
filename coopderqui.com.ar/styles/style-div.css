@@ -9,9 +9,10 @@ html {
 }
 
 #container {
-    display: block;
-    width: 90%;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 1%;
 }
 
 #header,
@@ -20,13 +21,12 @@ html {
 #aside,
 #footer {
     border: 1px solid black;
+    padding: 2%;
 }
 
 @media screen and (min-width: 600px) {
     #container {
-        display: grid;
         grid-template-columns: 70% 20%;
-        margin: auto;
     }
     #header,
     #nav,
@@ -52,7 +52,6 @@ html {
         grid-area: footer;
     }
     #container {
-        display: grid;
         grid-template-columns: 20% 50% 20%;
         grid-template-areas: 'header header header' 'nav main aside' 'footer footer footer';
     }
