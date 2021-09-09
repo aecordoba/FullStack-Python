@@ -8,10 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background-image: linear-gradient(to right, rgba(51, 102, 153, 0.2), rgba(51, 102, 153, 1));
-}
-
 #container {
     display: grid;
     grid-template-columns: 90%;
@@ -28,55 +24,6 @@ footer {
     padding: 2%;
 }
 
-header>img {
-    display: none;
-}
-
-header>h1 {
-    font-family: 'Noto Serif', serif;
-    text-align: center;
-}
-
-.social-media {
-    width: 100%;
-    overflow: auto;
-}
-
-.social-media a {
-    float: left;
-    width: 50%;
-    text-align: center;
-    color: blue;
-    padding: 12px 0;
-}
-
-.social-media a:hover {
-    color: navy;
-}
-
-.social-media a:active {
-    color: red;
-}
-
-.social-media a:visited {
-    color: purple;
-}
-
-footer {
-    font-family: 'Work Sans', sans-serif;
-}
-
-footer iframe {
-    float: right;
-}
-
-footer div::after {
-    content: "";
-    clear: both;
-    display: table;
-    margin: 2%;
-}
-
 @media screen and (min-width: 600px) {
     #container {
         grid-template-columns: 70% 20%;
@@ -85,13 +32,6 @@ footer div::after {
     nav,
     footer {
         grid-column: 1 / span 2;
-    }
-    header>img {
-        display: block;
-        margin: auto;
-        width: 90%;
-        height: auto;
-        max-width: 100%;
     }
 }
 
