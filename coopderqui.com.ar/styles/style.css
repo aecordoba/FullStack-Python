@@ -32,17 +32,17 @@ header>img {
     display: none;
 }
 
-header>h1 {
-    font-family: 'Noto Serif', serif;
+h1 {
+    font: 0.9rem 'Noto Serif', serif;
     text-align: center;
 }
 
-.social-media {
+.contact {
     width: 100%;
     overflow: auto;
 }
 
-.social-media a {
+.contact a {
     float: left;
     width: 50%;
     text-align: center;
@@ -50,15 +50,15 @@ header>h1 {
     padding: 12px 0;
 }
 
-.social-media a:hover {
+.contact a:hover {
     color: navy;
 }
 
-.social-media a:active {
+.contact a:active {
     color: red;
 }
 
-.social-media a:visited {
+.contact a:visited {
     color: purple;
 }
 
@@ -93,6 +93,9 @@ footer div::after {
         height: auto;
         max-width: 100%;
     }
+    h1 {
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -114,5 +117,8 @@ footer div::after {
     #container {
         grid-template-columns: 20% 50% 20%;
         grid-template-areas: 'header header header' 'nav main aside' 'footer footer footer';
+    }
+    h1 {
+        font-size: 1.7rem;
     }
 }
