@@ -28,13 +28,25 @@ footer {
     padding: 2%;
 }
 
+nav {
+    display: none;
+}
+
 header>img {
     display: none;
 }
 
+.menu-button {
+    cursor: pointer;
+}
+
 h1 {
-    font: 0.9rem 'Noto Serif', serif;
+    font: bold 1.1rem 'Noto Serif', serif;
     text-align: center;
+}
+
+h2 {
+    font: bold 0.8rem 'Stoke', serif;
 }
 
 .contact {
@@ -63,11 +75,13 @@ h1 {
 }
 
 footer {
-    font-family: 'Work Sans', sans-serif;
+    font: 0.7rem 'Work Sans', sans-serif;
 }
 
 footer iframe {
     float: right;
+    width: 40%;
+    height: 40%;
 }
 
 footer div::after {
@@ -75,6 +89,77 @@ footer div::after {
     clear: both;
     display: table;
     margin: 2%;
+}
+
+
+/**************************************************************************/
+
+.menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: hidden;
+    transition: 0.3s;
+}
+
+.menu-items {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(167, 167, 167);
+    transition: 0.3s;
+}
+
+a.current,
+a:hover:not(.currente) {
+    color: white;
+}
+
+a.current {
+    background-image: linear-gradient(to right, rgba(51, 102, 153, 0.2), rgba(51, 102, 153, 1));
+}
+
+.menu .close-menu-button {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;
+}
+
+
+/****************************************************************************/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(167, 167, 167);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -86,6 +171,9 @@ footer div::after {
     footer {
         grid-column: 1 / span 2;
     }
+    nav {
+        display: block;
+    }
     header>img {
         display: block;
         margin: auto;
@@ -95,6 +183,13 @@ footer div::after {
     }
     h1 {
         font-size: 1.3rem;
+    }
+    .menu,
+    .menu-button {
+        display: none;
+    }
+    footer {
+        font-size: 0.9rem;
     }
 }
 
@@ -120,5 +215,9 @@ footer div::after {
     }
     h1 {
         font-size: 1.7rem;
+    }
+    .menu,
+    .menu-button {
+        display: none;
     }
 }
