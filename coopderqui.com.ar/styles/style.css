@@ -20,9 +20,7 @@ body {
 }
 
 header,
-nav,
 main,
-aside,
 footer {
     border: 1px solid black;
     padding: 2%;
@@ -32,12 +30,14 @@ nav {
     display: none;
 }
 
-header>img {
-    display: none;
+aside {
+    background-color: rgb(255, 255, 153);
+    color: rgb(153, 0, 204);
+    padding: 1%;
 }
 
-.menu-button {
-    cursor: pointer;
+header>img {
+    display: none;
 }
 
 h1 {
@@ -50,28 +50,12 @@ h2 {
 }
 
 .contact {
-    width: 100%;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .contact a {
-    float: left;
-    width: 50%;
-    text-align: center;
     color: blue;
-    padding: 12px 0;
-}
-
-.contact a:hover {
-    color: navy;
-}
-
-.contact a:active {
-    color: red;
-}
-
-.contact a:visited {
-    color: purple;
 }
 
 footer {
@@ -94,16 +78,32 @@ footer div::after {
 
 /**************************************************************************/
 
-.menu {
+.menu-button {
+    position: fixed;
+    cursor: pointer;
+}
+
+#menu {
     height: 0%;
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    /*background-color: rgba(0, 0, 0, 0.7);*/
     overflow-y: hidden;
     transition: 0.3s;
+}
+
+#menu,
+ul {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+}
+
+#menu:hover,
+ul:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .menu-items {
@@ -114,7 +114,7 @@ footer div::after {
     margin-top: 2rem;
 }
 
-.menu a {
+a {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
@@ -124,15 +124,16 @@ footer div::after {
 }
 
 a.current,
-a:hover:not(.currente) {
+a:hover {
     color: white;
 }
 
 a.current {
     background-image: linear-gradient(to right, rgba(51, 102, 153, 0.2), rgba(51, 102, 153, 1));
+    cursor: none;
 }
 
-.menu .close-menu-button {
+.close-menu-button {
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -147,19 +148,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
+    /*    background-color: rgba(0, 0, 0, 0.7);*/
 }
 
 li {
     float: left;
-}
-
-li a {
-    display: block;
-    color: rgb(167, 167, 167);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -174,6 +167,12 @@ li a {
     nav {
         display: block;
     }
+    .fixed-menu-bar {
+        position: fixed;
+        top: 0;
+        left: 5%;
+        width: 90%;
+    }
     header>img {
         display: block;
         margin: auto;
@@ -184,7 +183,7 @@ li a {
     h1 {
         font-size: 1.3rem;
     }
-    .menu,
+    #menu,
     .menu-button {
         display: none;
     }
@@ -216,8 +215,11 @@ li a {
     h1 {
         font-size: 1.7rem;
     }
-    .menu,
+    #menu,
     .menu-button {
         display: none;
+    }
+    li {
+        float: none;
     }
 }
