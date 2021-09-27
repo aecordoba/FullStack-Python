@@ -1,3 +1,5 @@
+/** Document structure **/
+
 html {
     box-sizing: border-box;
 }
@@ -46,7 +48,11 @@ h1 {
 }
 
 h2 {
-    font: bold 0.8rem 'Stoke', serif;
+    font: bold 0.9rem 'Stoke', serif;
+}
+
+main p {
+    font-size: 0.7rem;
 }
 
 .contact {
@@ -76,7 +82,7 @@ footer div::after {
 }
 
 
-/**************************************************************************/
+/** Menu button **/
 
 .menu-button {
     position: fixed;
@@ -90,7 +96,6 @@ footer div::after {
     z-index: 1;
     top: 0;
     left: 0;
-    /*background-color: rgba(0, 0, 0, 0.7);*/
     overflow-y: hidden;
     transition: 0.3s;
 }
@@ -141,19 +146,39 @@ a.current {
 }
 
 
-/****************************************************************************/
+/** Menu bar **/
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*    background-color: rgba(0, 0, 0, 0.7);*/
 }
 
 li {
     float: left;
 }
+
+
+/** Forms **/
+
+label {
+    font: 1rem "Times New Roman", Times, serif;
+}
+
+input[type=text],
+select,
+textarea {
+    display: inline-block;
+    font: 0.9rem Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 1%;
+    border-radius: 4px;
+    margin: 1%;
+}
+
+
+/** Responsive format **/
 
 @media screen and (min-width: 600px) {
     #container {
@@ -190,6 +215,14 @@ li {
     footer {
         font-size: 0.9rem;
     }
+    .input-label {
+        float: left;
+        width: 25%;
+    }
+    .input-field {
+        float: left;
+        width: 75%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -198,6 +231,7 @@ li {
     }
     nav {
         grid-area: nav;
+        display: flex;
     }
     main {
         grid-area: main;

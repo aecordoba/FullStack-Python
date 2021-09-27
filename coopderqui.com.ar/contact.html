@@ -54,6 +54,66 @@
 
         <main>
             <h2>Contacto</h2>
+            <p>Desde este formulario usted puede solicitar un servicio, darlo de baja, hacer un reclamo o sugerencia. Nos pondremos en contacto a la brevedad.</p>
+            <form action="" method="POST" autocomplete="on">
+                <div class="row">
+                    <div class="input-label">
+                        <label for="names">Nombres</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="names" name="names" placeholder="Su nombre">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-label">
+                        <label for="last-name">Apellido</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="last-name" name="last-name" placeholder="Su apellido">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-label">
+                        <label for="phone">Teléfono</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="phone" name="phone" placeholder="Su teléfono">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-label">
+                        <label for="e-mail">E-mail</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="e-mail" name="e-mail" placeholder="Su e-mail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-label">
+                        <label for="intent">Motivo</label>
+                    </div>
+                    <div class="input-field">
+                        <select id="intent" name="intent">
+                            <option value="null">Seleccione su motivo</option>
+                            <option value="subscribe">Solicitud de Servicio</option>
+                            <option value="suggesting">Sugerencia</option>
+                            <option value="request">Reclamo</option>
+                            <option value="unsubscribe">Baja de Servicio</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-label">
+                        <label for="subject">Observaciones</label>
+                    </div>
+                    <div class="input-field">
+                        <textarea id="subject" name="subject" placeholder="Escriba cualquier dato pertinente" style="height:200px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
         </main>
 
         <aside>
