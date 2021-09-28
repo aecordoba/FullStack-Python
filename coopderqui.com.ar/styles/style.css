@@ -173,8 +173,15 @@ textarea {
     font: 0.9rem Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 1%;
-    border-radius: 4px;
+    border-radius: 6px;
     margin: 1%;
+}
+
+input[type=submit] {
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 
@@ -206,7 +213,10 @@ textarea {
         max-width: 100%;
     }
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.1rem;
     }
     #menu,
     .menu-button {
@@ -248,6 +258,9 @@ textarea {
     }
     h1 {
         font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.3rem;
     }
     #menu,
     .menu-button {
