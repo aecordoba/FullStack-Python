@@ -24,7 +24,7 @@ body {
 header,
 main,
 footer {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 2%;
 }
 
@@ -36,6 +36,19 @@ aside {
     background-color: rgb(255, 255, 153);
     color: rgb(153, 0, 204);
     padding: 1%;
+}
+
+aside h2 {
+    font-size: 0.8rem;
+}
+
+aside p,
+aside a {
+    font-size: 0.7rem;
+}
+
+aside a:hover {
+    color: rgb(153, 0, 204);
 }
 
 header>img {
@@ -51,8 +64,32 @@ h2 {
     font: bold 0.9rem 'Stoke', serif;
 }
 
+h3 {
+    font: bold 0.8rem 'Stoke', serif;
+}
+
 main p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    text-indent: 5%;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.box {
+    margin: 1%;
+    border: 1px solid rgba(204, 204, 204, 0.938);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+    float: left;
+    width: 100%;
+}
+
+div.box h3 {
+    text-align: center;
 }
 
 .contact {
@@ -210,7 +247,7 @@ input[type=submit] {
         margin: auto;
         width: 90%;
         height: auto;
-        max-width: 100%;
+        border-radius: 5%;
     }
     h1 {
         font-size: 1.4rem;
@@ -221,6 +258,10 @@ input[type=submit] {
     #menu,
     .menu-button {
         display: none;
+    }
+    .box {
+        width: 47%;
+        height: 42%;
     }
     footer {
         font-size: 0.9rem;
