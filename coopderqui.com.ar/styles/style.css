@@ -39,7 +39,8 @@ aside {
 }
 
 aside h2 {
-    font-size: 0.8rem;
+    font: bold 0.8rem;
+    text-align: center;
 }
 
 aside p,
@@ -254,6 +255,9 @@ input[type=submit] {
     }
     h2 {
         font-size: 1.1rem;
+    }
+    aside h2 {
+        font-size: 1rem;
     }
     #menu,
     .menu-button {
