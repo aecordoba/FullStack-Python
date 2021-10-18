@@ -1,11 +1,11 @@
 window.onscroll = function() { fixMenu() };
 
-var menuBar = document.getElementById("menu-bar");
-var topPosition = menuBar.offsetTop;
+const menuBar = document.getElementById("menu-bar");
+let topPosition = menuBar.offsetTop;
 
 
 function fixMenu() {
-    if (window.pageYOffset >= topPosition && window.innerWidth < 992) {
+    if (window.pageYOffset >= topPosition + 250) {
         menuBar.classList.add("fixed-menu-bar")
     } else {
         menuBar.classList.remove("fixed-menu-bar");

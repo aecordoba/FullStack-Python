@@ -197,6 +197,27 @@ li {
     float: left;
 }
 
+table#administration {
+    width: 100%;
+    color: rgb(18, 18, 75);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(51, 102, 153, 0.2);
+}
+
+td.left {
+    font: bold 0.9rem 'Stoke', serif;
+    text-align: right;
+    padding: 1%;
+}
+
+td.right {
+    font: 0.9rem 'Stoke', serif;
+    text-align: left;
+    padding: 1%;
+}
+
 
 /** Forms **/
 
