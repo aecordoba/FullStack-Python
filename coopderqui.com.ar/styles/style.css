@@ -222,6 +222,11 @@ input[type=submit] {
     border-radius: 6px;
 }
 
+.error {
+    font: 0.9rem Arial, Helvetica, sans-serif;
+    color: red;
+}
+
 
 /** Responsive format **/
 

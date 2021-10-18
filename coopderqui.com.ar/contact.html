@@ -55,40 +55,44 @@
         <main>
             <h2>Contacto</h2>
             <p>Desde este formulario usted puede solicitar un servicio, darlo de baja, hacer un reclamo o sugerencia. Nos pondremos en contacto a la brevedad.</p>
-            <form action="" method="POST" autocomplete="on">
-                <div class="row">
+            <form action="" method="get" autocomplete="on" onsubmit="return formValidation()">
+                <div>
                     <div class="input-label">
                         <label for="names">Nombres</label>
                     </div>
                     <div class="input-field">
                         <input type="text" id="names" name="names" placeholder="Su nombre">
+                        <span id="names-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="input-label">
                         <label for="last-name">Apellido</label>
                     </div>
                     <div class="input-field">
                         <input type="text" id="last-name" name="last-name" placeholder="Su apellido">
+                        <span id="last-name-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="input-label">
                         <label for="phone">Teléfono</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" id="phone" name="phone" placeholder="Su teléfono">
+                        <input type="text" id="phone" name="phone" placeholder="Su teléfono (sin espacios ni guiones)">
+                        <span id="phone-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="input-label">
-                        <label for="e-mail">E-mail</label>
+                        <label for="email">E-mail</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" id="e-mail" name="e-mail" placeholder="Su e-mail">
+                        <input type="text" id="email" name="email" placeholder="Su e-mail">
+                        <span id="email-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="input-label">
                         <label for="intent">Motivo</label>
                     </div>
@@ -100,17 +104,19 @@
                             <option value="request">Reclamo</option>
                             <option value="unsubscribe">Baja de Servicio</option>
                           </select>
+                        <span id="intent-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="input-label">
-                        <label for="subject">Observaciones</label>
+                        <label for="comments">Comentarios</label>
                     </div>
                     <div class="input-field">
-                        <textarea id="subject" name="subject" placeholder="Escriba cualquier dato pertinente" style="height:200px"></textarea>
+                        <textarea id="comments" name="comments" placeholder="Escriba cualquier dato pertinente" style="height:200px"></textarea>
+                        <span id="comments-error" class="error"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <input type="submit" value="Enviar">
                 </div>
             </form>
