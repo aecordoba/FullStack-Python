@@ -1,11 +1,14 @@
 window.onscroll = function() { fixMenu() };
 
 const menuBar = document.getElementById("menu-bar");
-let topPosition = menuBar.offsetTop;
-
+let menuBarTopPosition = menuBar.offsetTop;
+const container = document.getElementById("container");
+let containerTopPosition = container.offsetTop;
+const header = document.getElementsByTagName("header")[0]
+let headerTopPosition = header.offsetTop;
 
 function fixMenu() {
-    if (window.pageYOffset >= topPosition + 250) {
+    if (window.pageYOffset >= menuBarTopPosition + containerTopPosition + headerTopPosition) {
         menuBar.classList.add("fixed-menu-bar")
     } else {
         menuBar.classList.remove("fixed-menu-bar");
